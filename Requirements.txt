@@ -1,0 +1,8 @@
+opencv-python: This installs the OpenCV library for image and video processing.
+CMD : pip install opencv-python
+
+mediapipe: This installs the MediaPipe library for tasks such as hand tracking and pose estimation.
+CMD : pip install mediapipe
+
+numpy: This installs the NumPy library, which is often used with OpenCV for array operations.
+CMD : pip install numpy
