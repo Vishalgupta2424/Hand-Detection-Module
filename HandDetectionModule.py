@@ -1,7 +1,8 @@
 from builtins import int, str
 import cv2
 import mediapipe as mp
-import time
+import time 
+
 
 #mediapipe solution -->hands or drawing_utils-->Hands(specifictions)
 mp_hands = mp.solutions.hands
