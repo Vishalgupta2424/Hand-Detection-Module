@@ -3,7 +3,7 @@ import cv2
 import mediapipe as mp
 import time
 
-#Initialize MediaPipe hands and get hand tracking tools
+#mediapipe solution -->hands or drawing_utils-->Hands(specifictions)
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 mp_drawing = mp.solutions.drawing_utils
