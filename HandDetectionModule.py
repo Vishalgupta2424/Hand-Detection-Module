@@ -4,7 +4,7 @@ import mediapipe as mp
 import time 
 
 
-#mediapipe solution -->hands or drawing_utils-->Hands(specifictions)
+#mediapipe solution -->hands or drawing_utils-->Hands(specifications)
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 mp_drawing = mp.solutions.drawing_utils
@@ -29,7 +29,6 @@ while cap.isOpened():
     #Process the image with MediaPipe
     results = hands.process(image_rgb)
 
-    #Initialize variables to track detected hands
     left_hand_detected = False
     right_hand_detected = False
 
@@ -50,9 +49,9 @@ while cap.isOpened():
                                       landmark_drawing_spec=mp_drawing.DrawingSpec(color=landmark_color, thickness=3, circle_radius=4),
                                       connection_drawing_spec=mp_drawing.DrawingSpec(color=connection_color, thickness=3))
 
-            #Optional: Draw landmark numbers with custom font and style
-            for idx, landmark in enumerate(hand_landmarks.landmark):     # type: ignore
-                h, w, c = frame.shape  # height, width, channels for scaling the landmark coordinates
+            # Draw landmark numbers with custom font and style
+            for idx, landmark in enumerate(hand_landmarks.landmark):    
+                h, w, c = frame.shape  
                 cx, cy = int(landmark.x * w), int(landmark.y * h)
                 cv2.putText(frame, str(idx), (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255,255), 1, cv2.LINE_AA)
 
@@ -66,17 +65,15 @@ while cap.isOpened():
 
         
 
-    #Display current time
+    #### current time ####
     current_time = time.strftime('%H:%M:%S')
     cv2.putText(frame, f'Time: {current_time}', (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2, cv2.LINE_AA)
 
     
-
-    #Display the frame
     cv2.imshow('Hand Detection', frame)
 
-    # Exit the loop if 'q' is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):    #type: ignore
+    # Exit if 'q' is pressed
+    if cv2.waitKey(1) & 0xFF == ord('q'):    
         break
 
 cap.release()
