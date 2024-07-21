@@ -12,6 +12,6 @@ I developed a Python application that utilizes Mediapipe's hand tracking tools a
 
 ✨ Timestamp display to track real-time updates.
 
-OUTPUT DEMONSTRAION : 
-https://github.com/user-attachments/assets/2c2455ed-7aa6-4126-9e2a-cf1f6b39533a
+![Screenshot (1)](https://github.com/user-attachments/assets/9f75c081-34fd-4530-a669-dcb2f9aef4f2)
+
 
