@@ -11,3 +11,7 @@ I developed a Python application that utilizes Mediapipe's hand tracking tools a
 ✨ Dynamic messaging displaying whether left, right, or both hands are detected in the frame.
 
 ✨ Timestamp display to track real-time updates.
+
+OUTPUT DEMONSTRAION : 
+https://github.com/user-attachments/assets/2c2455ed-7aa6-4126-9e2a-cf1f6b39533a
+
